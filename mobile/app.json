@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Kōdo",
+    "slug": "kodo",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0d0d0d"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.koavhs.kodo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0d0d0d"
+      },
+      "package": "com.koavhs.kodo"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#0d0d0d"
+        }
+      ]
+    ],
+    "scheme": "kodo",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

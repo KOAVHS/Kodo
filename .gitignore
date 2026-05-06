@@ -1,0 +1,17 @@
+# Global .gitignore
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+dist/
+build/
+*.db
+*.sqlite
+venv/
+.venv/

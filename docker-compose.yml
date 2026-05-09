@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./kodo.db
+      - SECRET_KEY=dev-secret-key
+      - DEBUG=True
+    volumes:
+      - ./backend:/app
+    command: uvicorn app:app --reload --host 0.0.0.0 --port 8000
+
+  # Para desarrollo frontend local con Expo
+  # No se incluye en Docker ya que Expo necesita acceso al CLI local
+
+volumes:
+  db:
